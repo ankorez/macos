@@ -16,7 +16,7 @@ sudo scutil --set ComputerName "$MY_HOSTNAME"
 dscacheutil -flushcache
 
 #Join Domain
-dsconfigad -add manomano.lan -computer "`hostname -s`" -mobile enable -mobileconfirm disable -username "domainaccountname" -password "passbolt" -ou "CN=Computers,DC=mondomaine,DC=lan"
+dsconfigad -add mondomaine.lan -computer "`hostname -s`" -mobile enable -mobileconfirm disable -username "domainaccountname" -password "mypassword" -ou "CN=Computers,DC=mondomaine,DC=lan"
 dsconfigad -groups "mondomaine\Domain Admins,mondomaine\informatique"
 
 # Ask the user
